@@ -23,16 +23,16 @@ pipeline {
 
         // ── Stage 2: Install dependencies and test ────────────
         stage('Test') {
-            steps {
-                echo '🧪 Installing dependencies and running tests...'
-                bat '''
-                    python -m pip install --upgrade pip
-                    pip install -r requirements.txt
-                    pip install pytest
-                    pytest test_app.py -v
-                '''
-            }
-        }
+    steps {
+        echo '🧪 Installing dependencies and running tests...'
+        bat '''
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install --upgrade pip
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install -r requirements.txt
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install pytest
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pytest test_app.py -v
+        '''
+    }
+}
 
         // ── Stage 3: Build Docker image ───────────────────────
         stage('Build Docker Image') {
