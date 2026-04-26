@@ -1,0 +1,30 @@
+# Never copy these into the Docker image
+
+# Your secret API key — pass it as env variable at runtime instead
+.env
+
+# Virtual environment — Docker installs its own from requirements.txt
+venv/
+env/
+
+# Git history — not needed inside a container
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor files
+.vscode/
+
+# Logs
+*.log
+
+# The Dockerfile itself doesn't need to be inside the image
+Dockerfile
+.dockerignore
+
+# Test files — not needed at runtime
+test_*.py
