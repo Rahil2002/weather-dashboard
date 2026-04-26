@@ -26,10 +26,10 @@ pipeline {
     steps {
         echo '🧪 Installing dependencies and running tests...'
         bat '''
-            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install --upgrade pip
-            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install -r requirements.txt
-            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install pytest
-            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pytest test_app.py -v
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install --upgrade pip
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install pytest
+            "C:\\Users\\moham\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pytest test_app.py -v
         '''
     }
 }
