@@ -1,0 +1,17 @@
+# Virtual environment — never push this (it's huge and machine-specific)
+venv/
+
+# Your secret API key — NEVER push this
+.env
+
+# Python cache files — not needed
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# Windows junk files
+Thumbs.db
+desktop.ini
