@@ -36,12 +36,12 @@ pipeline {
 
         // ── Stage 3: Build Docker image ───────────────────────
         stage('Build Docker Image') {
-            steps {
-                echo '🐳 Building Docker image...'
-                bat "docker build -t %DOCKER_IMAGE%:%DOCKER_TAG% ."
-                bat "docker tag %DOCKER_IMAGE%:%DOCKER_TAG% %DOCKER_IMAGE%:latest"
-            }
-        }
+    steps {
+        echo '🐳 Building Docker image...'
+        bat "docker build --provenance=false -t %DOCKER_IMAGE%:%DOCKER_TAG% ."
+        bat "docker tag %DOCKER_IMAGE%:%DOCKER_TAG% %DOCKER_IMAGE%:latest"
+    }
+}
 
         // ── Stage 4: Push to Docker Hub ───────────────────────
         stage('Push to Docker Hub') {
